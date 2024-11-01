@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "QA4YTi76fv2l8USxsvrlxyr2VWcxpnTWRVepgUErxNdtsVAG194av7gwKib1n2q/8UqcWz+9pL1PryfEF65Njw==",
+  "success": true,
+  "projectFilePath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.API\\CRUD.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shariful\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\shariful\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\shariful\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\shariful\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\shariful\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\shariful\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

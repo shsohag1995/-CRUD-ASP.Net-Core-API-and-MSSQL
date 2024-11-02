@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace CRUD.DomainModel.GeneralEntity
 {
-    public class GeneralType:BaseEntity
+    public class GeneralType
     {
+        [Key]
+        public Int16 Id { get; set; }
         [Required(ErrorMessage = "General Type is required.")]
         public string Name { get; set; }
     }

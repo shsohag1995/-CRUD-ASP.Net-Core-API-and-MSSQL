@@ -30,8 +30,17 @@ namespace CRUD.Infrastructure
             //modelBuilder.Entity<UserInformation>().HasIndex(x => x.MobileNo).IsUnique();
 
         }
+        /* GeneralEntity Group*/
 
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<UserType> UserTypes { get; set; }
+        public DbSet<GeneralType> GeneralTypes { get; set; }
+        public DbSet<UserAddressType> UserAddressTypes { get; set; }
+        public DbSet<UserAddress> UserAddresses { get; set; }
+        public DbSet<UserEmail> UserEmails { get; set; }
+        public DbSet<UserPhone> UserPhones { get; set; }
+        public DbSet<UserInfo> UserInfos { get; set; }
+
+        /* GeneralEntity Group End*/
     }
 }

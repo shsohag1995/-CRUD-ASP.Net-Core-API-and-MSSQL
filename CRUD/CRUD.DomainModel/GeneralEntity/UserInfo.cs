@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUD.DomainModel.GeneralEntity
 {
-    public class UserInfo
+    public class UserInfo : BaseEntity
     {
         public int UserId { get; set; }
         public User User { get; set; }

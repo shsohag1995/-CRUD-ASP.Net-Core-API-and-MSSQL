@@ -1,0 +1,12 @@
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\bin\Debug\net6.0\CRUD.DomainModel.deps.json
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\bin\Debug\net6.0\CRUD.DomainModel.dll
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\bin\Debug\net6.0\CRUD.DomainModel.pdb
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.AssemblyInfoInputs.cache
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.AssemblyInfo.cs
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.csproj.CoreCompileInputs.cache
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.sourcelink.json
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.dll
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\refint\CRUD.DomainModel.dll
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\CRUD.DomainModel.pdb
+E:\01-11-2024\CRUD Asp.net Core API and MSSQL\CRUD\CRUD.DomainModel\obj\Debug\net6.0\ref\CRUD.DomainModel.dll

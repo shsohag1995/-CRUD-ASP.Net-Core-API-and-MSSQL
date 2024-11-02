@@ -22,6 +22,23 @@ namespace CRUD.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.GeneralType", b =>
+                {
+                    b.Property<short>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GeneralTypes");
+                });
+
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.User", b =>
                 {
                     b.Property<int>("Id")
@@ -60,6 +77,244 @@ namespace CRUD.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserAddress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsSoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserAddresses");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserAddressType", b =>
+                {
+                    b.Property<short>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserAddressTypes");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserEmail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<short>("GeneralTypeId")
+                        .HasColumnType("smallint");
+
+                    b.Property<bool>("IsSoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GeneralTypeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserEmails");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserInfo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GParentUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsSoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ParentUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RefUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<short>("UserTypeId1")
+                        .HasColumnType("smallint");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserTypeId1");
+
+                    b.ToTable("UserInfos");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserPhone", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<short>("GeneralTypeId")
+                        .HasColumnType("smallint");
+
+                    b.Property<bool>("IsSoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GeneralTypeId");
+
+                    b.ToTable("UserPhones");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserType", b =>
+                {
+                    b.Property<short>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserTypes");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserEmail", b =>
+                {
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.GeneralType", "GeneralType")
+                        .WithMany()
+                        .HasForeignKey("GeneralTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GeneralType");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserInfo", b =>
+                {
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.UserType", "UserType")
+                        .WithMany()
+                        .HasForeignKey("UserTypeId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+
+                    b.Navigation("UserType");
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserPhone", b =>
+                {
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.GeneralType", "GeneralType")
+                        .WithMany()
+                        .HasForeignKey("GeneralTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GeneralType");
                 });
 #pragma warning restore 612, 618
         }

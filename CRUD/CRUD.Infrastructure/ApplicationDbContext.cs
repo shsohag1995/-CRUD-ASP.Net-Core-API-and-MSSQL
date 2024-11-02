@@ -1,6 +1,8 @@
-﻿using CRUD.DomainModel.GeneralEntity;
+﻿using CRUD.Data.SeedData;
+using CRUD.DomainModel.GeneralEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,13 +25,25 @@ namespace CRUD.Infrastructure
             optionsBuilder.UseSqlServer(connectionStringIs);
 
         }
+        
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
+        //    //modelBuilder.Entity<UserInformation>().HasIndex(x => x.MobileNo).IsUnique();
 
+        //}
+        #region SeedData
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Entity<UserInformation>().HasIndex(x => x.MobileNo).IsUnique();
+
+            // Seed data
+            AppDbInitializer appDbInitializer = new AppDbInitializer();
+             appDbInitializer.SeedingData(modelBuilder);
 
         }
+        #endregion
+
         /* GeneralEntity Group*/
 
         public DbSet<User> Users { get; set; }
@@ -39,7 +53,6 @@ namespace CRUD.Infrastructure
         public DbSet<UserAddress> UserAddresses { get; set; }
         public DbSet<UserEmail> UserEmails { get; set; }
         public DbSet<UserPhone> UserPhones { get; set; }
-        public DbSet<UserInfo> UserInfos { get; set; }
 
         /* GeneralEntity Group End*/
     }

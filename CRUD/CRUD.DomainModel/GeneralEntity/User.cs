@@ -20,5 +20,11 @@ namespace CRUD.DomainModel.GeneralEntity
         [Required(ErrorMessage = "Password is required.")]
         [StringLength(100, MinimumLength = 4, ErrorMessage = "Password must be at least 4 characters long.")]
         public string Password { get; set; }
+        public string? Image { get; set; }
+        public string? FirstRefUserId { get; set; }
+        public string? SecondRefUserId { get; set; }
+        public string? ThirdRefUserId { get; set; }
+        public Int16 UserTypeId { get; set; } = 3;
+        public UserType UserType { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CRUD.Infrastructure.Migrations
+namespace CRUD.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -50,6 +50,12 @@ namespace CRUD.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("FirstRefUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsSoftDelete")
                         .HasColumnType("bit");
 
@@ -63,6 +69,12 @@ namespace CRUD.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("SecondRefUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ThirdRefUserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UId")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -71,10 +83,15 @@ namespace CRUD.Infrastructure.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<short>("UserTypeId")
+                        .HasColumnType("smallint");
+
                     b.Property<bool>("status")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserTypeId");
 
                     b.ToTable("Users");
                 });
@@ -166,56 +183,6 @@ namespace CRUD.Infrastructure.Migrations
                     b.ToTable("UserEmails");
                 });
 
-            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("GParentUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsSoftDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ParentUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RefUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<short>("UserTypeId1")
-                        .HasColumnType("smallint");
-
-                    b.Property<bool>("status")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("UserTypeId1");
-
-                    b.ToTable("UserInfos");
-                });
-
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserPhone", b =>
                 {
                     b.Property<int>("Id")
@@ -266,6 +233,34 @@ namespace CRUD.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = (short)1,
+                            Name = "Service Provider"
+                        },
+                        new
+                        {
+                            Id = (short)2,
+                            Name = "Partner User"
+                        },
+                        new
+                        {
+                            Id = (short)3,
+                            Name = "General User"
+                        });
+                });
+
+            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.User", b =>
+                {
+                    b.HasOne("CRUD.DomainModel.GeneralEntity.UserType", "UserType")
+                        .WithMany()
+                        .HasForeignKey("UserTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserType");
                 });
 
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserEmail", b =>
@@ -285,25 +280,6 @@ namespace CRUD.Infrastructure.Migrations
                     b.Navigation("GeneralType");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserInfo", b =>
-                {
-                    b.HasOne("CRUD.DomainModel.GeneralEntity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CRUD.DomainModel.GeneralEntity.UserType", "UserType")
-                        .WithMany()
-                        .HasForeignKey("UserTypeId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-
-                    b.Navigation("UserType");
                 });
 
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserPhone", b =>

@@ -37,6 +37,18 @@ namespace CRUD.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("GeneralTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = (short)1,
+                            Name = "Primary"
+                        },
+                        new
+                        {
+                            Id = (short)2,
+                            Name = "Secondary"
+                        });
                 });
 
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.User", b =>
@@ -50,8 +62,8 @@ namespace CRUD.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FirstRefUserId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("FirstRefUserId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
@@ -69,10 +81,14 @@ namespace CRUD.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("SecondRefUserId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("SecondRefUserId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("ThirdRefUserId")
+                    b.Property<int?>("ThirdRefUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UId")
@@ -141,6 +157,18 @@ namespace CRUD.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserAddressTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = (short)1,
+                            Name = "PermanentAddress"
+                        },
+                        new
+                        {
+                            Id = (short)2,
+                            Name = "PresentAddress"
+                        });
                 });
 
             modelBuilder.Entity("CRUD.DomainModel.GeneralEntity.UserEmail", b =>

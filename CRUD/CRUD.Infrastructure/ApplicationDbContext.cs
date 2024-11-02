@@ -45,7 +45,6 @@ namespace CRUD.Infrastructure
         #endregion
 
         /* GeneralEntity Group*/
-
         public DbSet<User> Users { get; set; }
         public DbSet<UserType> UserTypes { get; set; }
         public DbSet<GeneralType> GeneralTypes { get; set; }

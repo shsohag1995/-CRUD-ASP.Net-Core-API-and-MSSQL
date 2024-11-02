@@ -24,7 +24,7 @@ namespace CRUD.Data.BaseClass
         {
             DatabaseFactory = databaseFactory;
             dbset = DataContext.Set<TEntity>();
-            //dataContext = new TechnofairContext();            
+            //dataContext = new ApplicationDbContext();            
             if (DataContext != null)
             {
 
@@ -41,7 +41,7 @@ namespace CRUD.Data.BaseClass
         protected ApplicationDbContext DataContext
         {
             get { return dataContext ?? (dataContext = DatabaseFactory.Get()); }
-            //get { return dataContext == null ? new TechnofairContext() : dataContext; }
+            //get { return dataContext == null ? new ApplicationDbContext() : dataContext; }
         }
 
         public virtual void Add(TEntity entity)

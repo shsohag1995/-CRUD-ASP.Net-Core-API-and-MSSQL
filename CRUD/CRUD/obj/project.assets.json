@@ -938,14 +938,32 @@
           }
         }
       },
-      "CRUD.Application/1.0.0": {
+      "CRUD.AppBusiness/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CRUD.AppRepository": "1.0.0",
+          "CRUD.Utility": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/CRUD.Application.dll": {}
+          "bin/placeholder/CRUD.AppBusiness.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CRUD.Application.dll": {}
+          "bin/placeholder/CRUD.AppBusiness.dll": {}
+        }
+      },
+      "CRUD.AppRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CRUD.DomainModel": "1.0.0",
+          "CRUD.Infastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD.AppRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.AppRepository.dll": {}
         }
       },
       "CRUD.BackGroundService/1.0.0": {
@@ -956,23 +974,6 @@
         },
         "runtime": {
           "bin/placeholder/CRUD.BackGroundService.dll": {}
-        }
-      },
-      "CRUD.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "CRUD.DomainModel": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "Microsoft.Extensions.Configuration": "6.0.0",
-          "Microsoft.Extensions.Configuration.Json": "6.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CRUD.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CRUD.Data.dll": {}
         }
       },
       "CRUD.DomainModel/1.0.0": {
@@ -993,6 +994,23 @@
         },
         "runtime": {
           "bin/placeholder/CRUD.DomainViewModel.dll": {}
+        }
+      },
+      "CRUD.Infastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CRUD.DomainModel": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Json": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD.Infastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Infastructure.dll": {}
         }
       },
       "CRUD.ThirdPartyIntegrationService/1.0.0": {
@@ -2443,20 +2461,20 @@
         "version.txt"
       ]
     },
-    "CRUD.Application/1.0.0": {
+    "CRUD.AppBusiness/1.0.0": {
       "type": "project",
-      "path": "../CRUD.Application/CRUD.Application.csproj",
-      "msbuildProject": "../CRUD.Application/CRUD.Application.csproj"
+      "path": "../CRUD.Application/CRUD.AppBusiness.csproj",
+      "msbuildProject": "../CRUD.Application/CRUD.AppBusiness.csproj"
+    },
+    "CRUD.AppRepository/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.AppRepository/CRUD.AppRepository.csproj",
+      "msbuildProject": "../CRUD.AppRepository/CRUD.AppRepository.csproj"
     },
     "CRUD.BackGroundService/1.0.0": {
       "type": "project",
       "path": "../CRUD.BackGroundService/CRUD.BackGroundService.csproj",
       "msbuildProject": "../CRUD.BackGroundService/CRUD.BackGroundService.csproj"
-    },
-    "CRUD.Data/1.0.0": {
-      "type": "project",
-      "path": "../CRUD.Infrastructure/CRUD.Data.csproj",
-      "msbuildProject": "../CRUD.Infrastructure/CRUD.Data.csproj"
     },
     "CRUD.DomainModel/1.0.0": {
       "type": "project",
@@ -2467,6 +2485,11 @@
       "type": "project",
       "path": "../CRUD.ViewModel/CRUD.DomainViewModel.csproj",
       "msbuildProject": "../CRUD.ViewModel/CRUD.DomainViewModel.csproj"
+    },
+    "CRUD.Infastructure/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Infrastructure/CRUD.Infastructure.csproj",
+      "msbuildProject": "../CRUD.Infrastructure/CRUD.Infastructure.csproj"
     },
     "CRUD.ThirdPartyIntegrationService/1.0.0": {
       "type": "project",
@@ -2481,11 +2504,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CRUD.Application >= 1.0.0",
+      "CRUD.AppBusiness >= 1.0.0",
       "CRUD.BackGroundService >= 1.0.0",
-      "CRUD.Data >= 1.0.0",
       "CRUD.DomainModel >= 1.0.0",
       "CRUD.DomainViewModel >= 1.0.0",
+      "CRUD.Infastructure >= 1.0.0",
       "CRUD.ThirdPartyIntegrationService >= 1.0.0",
       "CRUD.Utility >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
@@ -2522,8 +2545,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj": {
-              "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj"
+            "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj": {
+              "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj"
             },
             "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.BackGroundService\\CRUD.BackGroundService.csproj": {
               "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.BackGroundService\\CRUD.BackGroundService.csproj"
@@ -2531,8 +2554,8 @@
             "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj": {
               "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj"
             },
-            "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj": {
-              "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj"
+            "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj": {
+              "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj"
             },
             "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.ThirdPartyIntegrationService\\CRUD.ThirdPartyIntegrationService.csproj": {
               "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.ThirdPartyIntegrationService\\CRUD.ThirdPartyIntegrationService.csproj"

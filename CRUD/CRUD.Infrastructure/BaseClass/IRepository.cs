@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD.Data.BaseClass
+namespace CRUD.Infrastructure.BaseClass
 {
     public interface IRepository<T> where T : class
     {

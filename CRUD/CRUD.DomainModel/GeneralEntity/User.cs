@@ -26,6 +26,6 @@ namespace CRUD.DomainModel.GeneralEntity
         public int? ThirdRefUserId { get; set; }
         public Int16 UserTypeId { get; set; } = 3;
         public UserType UserType { get; set; }
-        public string Token { get; set; }
+        public string? Token { get; set; }
     }
 }

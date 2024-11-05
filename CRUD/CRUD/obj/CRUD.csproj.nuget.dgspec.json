@@ -4,12 +4,12 @@
     "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj": {
+    "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj",
-        "projectName": "CRUD.Application",
-        "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj",
+        "projectUniqueName": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj",
+        "projectName": "CRUD.AppBusiness",
+        "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj",
         "packagesPath": "C:\\Users\\shariful\\.nuget\\packages\\",
         "outputPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -27,7 +27,76 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\CRUD.AppRepository.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\CRUD.AppRepository.csproj"
+              },
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Utility\\CRUD.Utility.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Utility\\CRUD.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\CRUD.AppRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\CRUD.AppRepository.csproj",
+        "projectName": "CRUD.AppRepository",
+        "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\CRUD.AppRepository.csproj",
+        "packagesPath": "C:\\Users\\shariful\\.nuget\\packages\\",
+        "outputPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.AppRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\shariful\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj"
+              },
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -169,12 +238,12 @@
         }
       }
     },
-    "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj": {
+    "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj",
-        "projectName": "CRUD.Data",
-        "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj",
+        "projectUniqueName": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj",
+        "projectName": "CRUD.Infastructure",
+        "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj",
         "packagesPath": "C:\\Users\\shariful\\.nuget\\packages\\",
         "outputPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
@@ -448,8 +517,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj": {
-                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.Application.csproj"
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Application\\CRUD.AppBusiness.csproj"
               },
               "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.BackGroundService\\CRUD.BackGroundService.csproj": {
                 "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.BackGroundService\\CRUD.BackGroundService.csproj"
@@ -457,8 +526,8 @@
               "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj": {
                 "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.DomainModel\\CRUD.DomainModel.csproj"
               },
-              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj": {
-                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Data.csproj"
+              "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj": {
+                "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.Infrastructure\\CRUD.Infastructure.csproj"
               },
               "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.ThirdPartyIntegrationService\\CRUD.ThirdPartyIntegrationService.csproj": {
                 "projectPath": "E:\\01-11-2024\\CRUD Asp.net Core API and MSSQL\\CRUD\\CRUD.ThirdPartyIntegrationService\\CRUD.ThirdPartyIntegrationService.csproj"

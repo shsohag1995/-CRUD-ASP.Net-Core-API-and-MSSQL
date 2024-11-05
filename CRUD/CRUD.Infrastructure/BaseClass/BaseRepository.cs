@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CRUD.Infrastructure;
 
-namespace CRUD.Data.BaseClass
+namespace CRUD.Infrastructure.BaseClass
 {
     public abstract class BaseRepository<TEntity> where TEntity : class
     {

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -24,10 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CRUD.Application\CRUD.Application.csproj" />
+    <ProjectReference Include="..\CRUD.Application\CRUD.AppBusiness.csproj" />
     <ProjectReference Include="..\CRUD.BackGroundService\CRUD.BackGroundService.csproj" />
     <ProjectReference Include="..\CRUD.DomainModel\CRUD.DomainModel.csproj" />
-    <ProjectReference Include="..\CRUD.Infrastructure\CRUD.Data.csproj" />
+    <ProjectReference Include="..\CRUD.Infrastructure\CRUD.Infastructure.csproj" />
     <ProjectReference Include="..\CRUD.ThirdPartyIntegrationService\CRUD.ThirdPartyIntegrationService.csproj" />
     <ProjectReference Include="..\CRUD.Utility\CRUD.Utility.csproj" />
     <ProjectReference Include="..\CRUD.ViewModel\CRUD.DomainViewModel.csproj" />
